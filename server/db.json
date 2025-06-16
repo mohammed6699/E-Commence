@@ -1,0 +1,398 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "productName": "Apple iPhone 15",
+      "productImage": "https://f.nooncdn.com/p/pnsku/N53432547A/45/_/1694762192/fd45d583-8af9-4ff3-8032-af4a5a3c553c.jpg?format=avif&width=240",
+      "productQuantity": 20,
+      "productPrice": 200,
+      "CategoryID": 1,
+      "productDescription": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem  lorem lorem lorem lorem lorem lorem",
+      "ClientName": "Mohammed",
+      "showImg": true,
+      "showdate": false
+    },
+    {
+      "id": "2",
+      "productName": "Samsung Galaxy frontend ",
+      "productImage": "https://f.nooncdn.com/p/pnsku/N70030440V/45/_/1702699238/6ae73ece-d29e-4a81-ba41-850055d0937f.jpg?format=avif&width=240",
+      "productQuantity": 0,
+      "productPrice": 200,
+      "CategoryID": 2,
+      "productDescription": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem  lorem lorem lorem lorem lorem lorem",
+      "ClientName": "Ahmed",
+      "showImg": true,
+      "showdate": false
+    },
+    {
+      "id": "3",
+      "productName": "Apple iPhone 13",
+      "productImage": "https://f.nooncdn.com/p/v1686205682/N50838986A_1.jpg?format=avif&width=240",
+      "productQuantity": 0,
+      "productPrice": 200,
+      "CategoryID": 1,
+      "productDescription": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem  lorem lorem lorem lorem lorem lorem",
+      "ClientName": "Ibrahim",
+      "showImg": true,
+      "showdate": false
+    },
+    {
+      "id": "4",
+      "productName": "Samsung Galaxy ",
+      "productImage": "https://f.nooncdn.com/p/pnsku/N70035206V/45/_/1712239207/3e7c97e2-cf7d-48ee-b324-a5d4aa30efe8.jpg?format=avif&width=240",
+      "productQuantity": 1,
+      "productPrice": 200,
+      "CategoryID": 2,
+      "productDescription": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem  lorem lorem lorem lorem lorem lorem",
+      "ClientName": "Zyad",
+      "showImg": true,
+      "showdate": false
+    },
+    {
+      "id": "5",
+      "productName": "OPPO Reno 12F 5G ",
+      "productImage": "https://f.nooncdn.com/p/pnsku/N70093960V/45/_/1721457134/54d5b998-81c6-4fdd-9b0e-eca01f6979b7.jpg?format=avif&width=240",
+      "productQuantity": 20,
+      "productPrice": 200,
+      "CategoryID": 2,
+      "productDescription": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem  lorem lorem lorem lorem lorem lorem",
+      "ClientName": "Omar",
+      "showImg": true,
+      "showdate": false
+    },
+    {
+      "id": "6",
+      "productName": "iphone",
+      "productImage": "https://f.nooncdn.com/p/v1640152217/N52217824A_1.jpg?format=avif&width=240",
+      "productQuantity": 20,
+      "productPrice": 200,
+      "CategoryID": 2,
+      "productDescription": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem  lorem lorem lorem lorem lorem lorem",
+      "ClientName": "Zynab",
+      "showImg": true,
+      "showdate": false
+    },
+    {
+      "id": "7",
+      "productName": "iphone",
+      "productImage": "https://f.nooncdn.com/p/pnsku/N70085224V/45/_/1721894952/91270228-e30b-484e-ae2a-3e746b194bb2.jpg?format=avif&width=240",
+      "productQuantity": 20,
+      "productPrice": 200,
+      "CategoryID": 3,
+      "productDescription": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem  lorem lorem lorem lorem lorem lorem",
+      "ClientName": "Ali",
+      "showImg": true,
+      "showdate": false
+    }
+  ],
+  "users": [
+    {
+      "id": "20a7",
+      "fname": "Mohamed",
+      "email": "mohamed@example.com",
+      "password": "mhamed@25"
+    },
+    {
+      "id": "39b6",
+      "fname": "Ahmed",
+      "email": "Ahed@example.com",
+      "password": "mhamed@25"
+    },
+    {
+      "id": "99a0",
+      "fname": "Ibrahim",
+      "email": "ibrahim@example.com",
+      "password": "ibrahim@#!25"
+    },
+    {
+      "id": "d346",
+      "fname": "Ibrahim",
+      "email": "ibrahim@example.com",
+      "password": "ibrahim@#!25"
+    },
+    {
+      "id": "6711",
+      "fname": "Mahmoud",
+      "email": "mahmoud@example.com",
+      "password": "moah@#!25"
+    },
+    {
+      "id": "e4ce",
+      "fname": "Mahmoud",
+      "email": "mahmoud@example.com",
+      "password": "moah@#!25"
+    },
+    {
+      "id": "c672",
+      "fname": "ffffffff",
+      "password": "1111111",
+      "email": "hhhhhhh"
+    },
+    {
+      "id": "a97c",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "Asde@!#225",
+      "fname": "mohamed "
+    },
+    {
+      "id": "4110",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "ASDE!@#58972dd",
+      "fname": "mohamed REfaat"
+    },
+    {
+      "id": "205d",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "ASDE!@#58972dd",
+      "fname": "mohamed REfaat"
+    },
+    {
+      "id": "3bb2",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "ASDE!@#58972dd",
+      "fname": "mohamed REfaat"
+    },
+    {
+      "id": "1cc6",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "AAAA1233@#!jh",
+      "fname": "mohamed Refaat"
+    },
+    {
+      "id": "f660",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "AAAA1233@#!jh",
+      "fname": "mohamed Refaat"
+    },
+    {
+      "id": "4075",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "AAAA1233@#!jh",
+      "fname": "mohamed Refaat"
+    },
+    {
+      "id": "7811",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "AAAA1233@#!jh",
+      "fname": "mohamed Refaat"
+    },
+    {
+      "id": "2cc4",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "AAAA1233@#!jh",
+      "fname": "mohamed Refaat"
+    },
+    {
+      "id": "302f",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "AAAA1233@#!jh",
+      "fname": "mohamed Refaat"
+    },
+    {
+      "id": "5c0a",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "AAAA1233@#!jh",
+      "fname": "mohamed Refaat"
+    },
+    {
+      "id": "1fb1",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "AAAA1233@#!jh",
+      "fname": "mohamed Refaat"
+    },
+    {
+      "id": "4fe4",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "AAAA1233@#!jh",
+      "fname": "mohamed Refaat"
+    },
+    {
+      "id": "abf8",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "AAAA1233@#!jh",
+      "fname": "mohamed Refaat"
+    },
+    {
+      "id": "71df",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "AAAA1233@#!jh",
+      "fname": "mohamed Refaat"
+    },
+    {
+      "id": "ad85",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "AAAA1233@#!jh",
+      "fname": "mohamed Refaat"
+    },
+    {
+      "id": "a070",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "AAAA1233@#!jh",
+      "fname": "mohamed Refaat"
+    },
+    {
+      "id": "dcc1",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "AAAA1233@#!jh",
+      "fname": "mohamed Refaat"
+    },
+    {
+      "id": "c505",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "AAAA1233@#!jh",
+      "fname": "mohamed Refaat"
+    },
+    {
+      "id": "fe4e",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "AAAA1233@#!jh",
+      "fname": "mohamed Refaat"
+    },
+    {
+      "id": "1533",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "AAAA1233@#!jh",
+      "fname": "mohamed Refaat"
+    },
+    {
+      "id": "ccf0",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "AAAAAAAAAAAA234er",
+      "fname": "mohamedRe"
+    },
+    {
+      "id": "84f6",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "AAAAAAAAAAAA234er",
+      "fname": "mohamedRe"
+    },
+    {
+      "id": "2ccb",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "ASD123!@wsd",
+      "fname": "mohamedRe"
+    },
+    {
+      "id": "4812",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "ASD123!@wsd",
+      "fname": "mohamedRe"
+    },
+    {
+      "id": "97a2",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "ASD123!@wsd",
+      "fname": "mohamedRe"
+    },
+    {
+      "id": "e662",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "ASD123!@wsd",
+      "fname": "mohamedRe"
+    },
+    {
+      "id": "f16f",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "ASD123!@wsd",
+      "fname": "mohamedRe"
+    },
+    {
+      "id": "8a9f",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "ASD123!@wsd",
+      "fname": "mohamedRe"
+    },
+    {
+      "id": "2818",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "ASD123!@wsd",
+      "fname": "mohamedRe"
+    },
+    {
+      "id": "2385",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "ASD123!@wsd",
+      "fname": "mohamedRe"
+    },
+    {
+      "id": "05fb",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "ASD123!@wsd",
+      "fname": "mohamedRe"
+    },
+    {
+      "id": "a09c",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "ASD123!@wsd",
+      "fname": "mohamedRe"
+    },
+    {
+      "id": "8002",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "ASD123!@wsd",
+      "fname": "mohamedRe"
+    },
+    {
+      "id": "6250",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "ASD!@#eedf12",
+      "fname": "mohamedRe"
+    },
+    {
+      "id": "d16f",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "ADG!@#@58964bb",
+      "fname": "mohamedRe"
+    },
+    {
+      "id": "7981",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "fname": "mohamedReffaeee",
+      "password": "ASDF321@#%$58nm"
+    }
+  ],
+  "User": [
+    {
+      "id": "d086",
+      "fname": "Mohamed",
+      "email": "mohamed@gmail.com",
+      "password": "mohamed@#52",
+      "phone": 12559999,
+      "address": "ffg5248"
+    },
+    {
+      "id": "de0e"
+    },
+    {
+      "id": "877a",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "password": "Haohamed!@#6699",
+      "fname": "mohamed refaat ibrahim",
+      "phone": 1123392044
+    },
+    {
+      "id": "d2a1",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "fname": "01050990360",
+      "address": "3شارع زين العابدين ادم متفرع من ربيع الجيزي - الجيزة بجوار رنين",
+      "password": "Assd!@#598",
+      "phone": 1050990360
+    },
+    {
+      "id": "14d8",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "fname": "01050990360",
+      "address": "3شارع زين العابدين ادم متفرع من ربيع الجيزي - الجيزة بجوار رنين",
+      "password": "ASWED!@#58974mm",
+      "phone": 1050990360
+    },
+    {
+      "id": "34f8",
+      "email": "mohammedahmed.refaat@gmail.com",
+      "fname": "01050990360",
+      "address": "شارع زين العابدين ادم  ",
+      "password": "ASDF321@#%$58nm",
+      "phone": 1123392044
+    }
+  ]
+}

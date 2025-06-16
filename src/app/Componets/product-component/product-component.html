@@ -1,0 +1,27 @@
+<label class="form-label">Filter by product Name</label>
+<input type="text" class="form-control" [(ngModel)]="filterByName"/>
+<!-- catch event -->
+ <!-- fire event by $event -->
+<app-products [filterByNameChild]="filterByName" (productProperty)="addToCartInParent($event)"></app-products>
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>price</th>
+            <th>quantity</th>
+            <th>Total Price</th>
+            <th>delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(product of productInParent; track product.id){
+            <tr>
+                <td>{{product.productName}}</td>
+                <td>{{product.productPrice}}</td>
+                <td>{{product.productQuantity}}</td>
+                <td>{{product.productPrice * product.productQuantity}}</td>
+                <td><button class="btn btn-primary" (click)="deleteProduct(product)" [disabled]="product.productQuantity===0"><i class="fa-solid fa-trash"></i></button></td>
+            </tr>
+        }
+    </tbody>
+</table>

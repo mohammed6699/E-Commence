@@ -1,0 +1,60 @@
+
+<div class="row">
+    @for(product of productAfterSearch; track product.id){
+        <div class="col-md-3 m-5">
+        <div class="card" style="width: 18rem;" appImgStyle color1="green">
+            @if(product.showImg){
+                <img [src] = 'product.productImage' class="card-img-top" alt="product Image"/>
+                <hr style="width: 200px; margin-left: auto; margin-right: auto;"/>
+            }@else{
+                <!-- <div><p>Thanks for purchasing from our Store {{StoreProperty.clietName}}</p></div> -->
+                <div class="m-2"><p>Thanks for purchasing from our Store {{product.ClientName}}</p></div>
+            }
+        
+        <div class="card-body">
+            <!-- interpulation -->
+             <!-- ngclass -->
+            <h5 class="card-title" [class.text-warning]="product.productQuantity == 1">{{product.productName}}</h5>
+            <!-- style -->
+            <!-- <h5 class="card-title" [style.color]="product.productQuantity == 1?'yellow':'black'">{{product.productName}}</h5> -->
+            <!-- ngstyle -->
+            <h5 class="card-title" [ngStyle]="{'color':product.productQuantity == 1?'red':'black'}">{{product.productName}}</h5>
+            <p>Product Quanitity: {{product.productQuantity}}</p>
+            <p>Product Price: {{product.productPrice | currency: 'EUR'}}</p>
+            <p class="text-danger">Discount Price: {{product.productPrice| discount:20 | currency: 'EUR'}}</p>
+        </div>
+            <input type="number" style="width: 150px;" class="mx-3" #qtyValue [(ngModel)]="serachedValue" />
+        <div>
+            @if(product.productQuantity >= 0){
+                <button class="btn btn-primary my-4 mx-3" (click)="totalPrice( product.id, qtyValue.value, product.productPrice)" [disabled]="product.productQuantity == 0"
+                (click)="addToCartInChild(product)"><i class="fa-solid fa-bag-shopping"></i> Add to cart</button>
+                <p class="ms-3" [hidden]="product.showdate">selling day: {{date | date:'short'}}</p>
+            }
+            <p class="ms-3">{{creditNUmber|creditCard}}</p>
+            <p class="mx-3">The Total Price is: {{TotalPrice}}</p>
+        </div>
+        <div class="d-flex m-3 justify-content-between">
+            @switch (product.productQuantity){
+                @case(0){
+                    <p class="text-danger">Out of stock</p>
+                }
+                @case(1){
+                    <p class="text-warning">Last Item available</p>
+                }
+                @default {
+                    <p class="text-success">In stock</p>
+                }
+            }
+            <button class="btn btn-dark" (click)="toggle(product.productImage)" (click)="shoeImg(product.id)">Buy</button>
+            <button class="btn btn-secondary" [routerLink]="['/product_component',product.id]">Show details</button>
+        </div>
+        </div>
+    </div>
+    }@empty {
+        <div  style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <img src="404-image.jpg" alt="not foind page" style="padding-top: 20px;" />
+            <p style="padding-top: 20px;">Sorry, There is no product available at the moment</p>
+        </div>
+    }
+    
+</div>

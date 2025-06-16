@@ -1,0 +1,15 @@
+<!-- <div class="d-flex gap-5">
+    <button class="btn btn-primary" (click)="loginUser()">Login</button>
+    <button class="btn btn-danger" (click)="logoutUser()">Logout</button>
+</div> -->
+
+<div style="display: flex; align-items: baseline;">
+    <img src={{storeProperty.storeLogo}} style="width: 80px; height: 80px; margin: 10px; border-radius: 50%;"/>
+    <h1>{{storeProperty.storeName}}</h1>
+</div>  
+<ul>
+    @for(items of storeProperty.storeBranches; track items){
+        <li>{{items}}</li>
+    }
+</ul>
+<app-products></app-products>

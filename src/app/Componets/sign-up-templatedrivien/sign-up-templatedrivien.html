@@ -1,0 +1,75 @@
+<!-- check backend workd corectly -->
+<!-- <button (click)="addUser()">add user</button> -->
+ <form class="container" 
+ style="border: 1px solid black; width: 500px; border-radius: 10px; margin-top: 20px; margin-bottom: 20px;"
+ (ngSubmit)="addUser()"
+ #signUp="ngForm">
+  <div class="form-row">
+    <div class="form-group col-md-6" style="margin-top: 10px;">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required name="email" 
+      [(ngModel)]="userProp.email" 
+      #email="ngModel"
+      required
+      pattern="[a-z0-9._%+\-]+@(gmail|facebook)+\.(com|eg|edu)$"
+      [ngClass]="{'is-invalid':(email.invalid),
+        'is-valid':(email.valid)
+      }"/>
+      <div class="invalid-feedback">
+        @if(email.errors?.['required']){
+            <p>Email is required</p>
+        }@else if(email.errors?.['pattern']){
+            <p>You can Use google or facebook email to signup</p>
+        }
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Password</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Password" required minlength="6" 
+      name="password"
+      [(ngModel)]="userProp.password" 
+      #pass="ngModel"
+      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+      [ngClass]="{'is-invalid':(pass.invalid),
+        'valid':(pass.valid)
+      }"/>
+      <div class="invalid-feedback">
+        @if(pass.errors?.['required']){
+            <p>Password is required</p>
+        }@else if (pass.errors?.['minlength']){
+            <p>Password is at least 6 chars</p>
+        }@else if (pass.errors?.['pattern']) {
+            <p>Password must contain letters, symbols and number</p>
+        }
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Full Name</label>
+    <input 
+    type="text" 
+    class="form-control" 
+    id="inputAddress" 
+    placeholder="Full Name" 
+    required minlength="5" 
+    [(ngModel)]="userProp.fname"
+    name="fname"
+    #fname="ngModel"
+      minlength="8"
+      [ngClass]="{'is-invalid':(fname.touched && fname.invalid),
+        'is-valid':(fname.valid)
+      }"
+    >
+      <div class="invalid-feedback">
+        @if(fname.errors?.['required']){
+            <p>Full Name is required</p>
+        }@else if(fname.errors?.['minlength']){
+            <p>Full Name is at Least 8 chars</p>
+        }
+      </div>
+  </div>
+  <div class="form-row">
+  </div>
+  
+  <button type="submit" class="btn btn-primary" style="margin-bottom: 20px; margin-top: 20px;" [disabled]="signUp.invalid" routerLink="/products">Sign in</button>
+</form>

@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <!-- ? => safe navigation operator -->
+            <img class="img-fluid" [src]="product.productImage"/>
+        </div>
+        <div class="col-md-8 mt-5">
+            <p class="mt-5">{{product.productName}}</p>
+            <p>{{product.productDescription}}</p>
+        <div class="d-flex justify-content-center align-items-center gap-5">
+            <button class="btn btn-info"
+            (click)="PrevFunc()"
+            [disabled]="currentId==allIds[0]">
+                prev
+            </button>
+            <button class="btn btn-info"
+            (click)="NextFunc()"
+            [disabled]="currentId==allIds[allIds.length-1]">
+                next
+            </button>
+        </div>
+        </div>
+    </div>
+    <button>back</button>
+</div>
