@@ -20,7 +20,7 @@ export class ProductService {
     }
    }
    addProduct(newProduct:IProduct):Observable<IProduct>{
-    return this.http.post<IProduct>(`${environment.baseUrl}products `, newProduct, this.httpHeader)
+    return this.http.post<IProduct>(`${environment.baseUrl}products`, newProduct, this.httpHeader)
    }
    updateProduct(newUpdatedProduct:IProduct):Observable<IProduct>{
     return this.http.patch<IProduct>(`${environment.baseUrl}products/${newUpdatedProduct.id}`, newUpdatedProduct,this.httpHeader)

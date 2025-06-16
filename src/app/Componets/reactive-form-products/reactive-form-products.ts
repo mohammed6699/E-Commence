@@ -17,7 +17,7 @@ export class ReactiveFormProducts {
   selectAction : 'add'| 'update'| 'delete' = 'add';
   constructor(){
     this.productForm=new FormGroup({
-      id: new FormControl('', [Validators.required]),
+      id: new FormControl('', [Validators.required, Validators.minLength(2)]),
       productName: new FormControl('', [Validators.required, Validators.minLength(3)]),
       productQuantity: new FormControl('', [Validators.required, Validators.minLength(3)]),
       productPrice: new FormControl('', [Validators.required, Validators.pattern('[0-9]')]),
@@ -26,6 +26,9 @@ export class ReactiveFormProducts {
       productDescription: new FormControl('', [Validators.minLength(5)]),
       ClientName: new FormControl('', [Validators.minLength(5)])
     })
+  }
+  get ProductValidation(){
+    return this.productForm.get('ProductValidation')
   }
 addProduct(){
   const newProduct = this.productForm.value

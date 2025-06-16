@@ -15,7 +15,8 @@
       placeholder="ProductId" 
       name="id"
       formControlName="id"
-      style="border: 2px solid rgb(118, 109, 201);"/>
+      style="border: 2px solid rgb(118, 109, 201);"
+      [ngClass]="{'is-valid':ProductValidation?.valid, 'is-invalid':(ProductValidation?.touched) && ProductValidation?.invalid}"/>
     </div>
   </div>
   <div class="form-row">
