@@ -1,5 +1,5 @@
 // for depolymnet process
 export const environment = {
-    baseUrl:'https://e-commence-five.vercel.app/',
+    baseUrl:'https://e-commence-flax.vercel.app/',
     production:true
 };
