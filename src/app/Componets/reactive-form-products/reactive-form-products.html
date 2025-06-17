@@ -24,7 +24,16 @@
         placeholder="productName" 
         name="productName"
         formControlName="productName"
-        style="border: 2px solid rgb(96, 145, 96);"/>
+        style="border: 2px solid rgb(96, 145, 96);"
+        [ngClass]="{'is-valid': productForm.get('productName')?.valid && (productForm.get('productName')?.dirty || productForm.get('productName')?.touched),
+          'is-invalid': productForm.get('productName')?.invalid &&(productForm.get('productName')?.dirty || productForm.get('productName')?.touched)
+        }"/>
+       <div class="valid-feedback">
+          accepted
+        </div>
+        <div class="invalid-feedback">
+          please enter a value
+        </div>
       </div>
       <div class="form-group col-md-12 pt-2">
         <label for="productQuantity">productQuantity</label>
@@ -34,7 +43,16 @@
         placeholder="productQuantity"
         name="password"
         formControlName="productQuantity"
-      style="border: 2px solid rgb(96, 145, 96);"/>
+      style="border: 2px solid rgb(96, 145, 96);"
+      [ngClass]="{'is-valid': productForm.get('productQuantity')?.valid && (productForm.get('productQuantity')?.dirty || productForm.get('productQuantity')?.touched),
+          'is-invalid': productForm.get('productQuantity')?.invalid &&(productForm.get('productQuantity')?.dirty || productForm.get('productQuantity')?.touched)
+        }"/>
+               <div class="valid-feedback">
+          accepted
+        </div>
+        <div class="invalid-feedback">
+          please enter a value
+        </div>
       </div>
 
   </div>
@@ -46,7 +64,17 @@
     class="form-control" 
     placeholder="productPrice"
     formControlName="productPrice"
-    style="border: 2px solid rgb(96, 145, 96);"/>
+    style="border: 2px solid rgb(96, 145, 96);"
+    [ngClass]="{'is-valid': productForm.get('productPrice')?.valid && (productForm.get('productPrice')?.dirty || productForm.get('productPrice')?.touched),
+          'is-invalid': productForm.get('productPrice')?.invalid &&(productForm.get('productPrice')?.dirty || productForm.get('productPrice')?.touched)
+        }"
+    />
+    <div class="valid-feedback">
+          accepted
+        </div>
+        <div class="invalid-feedback">
+          please enter a value
+        </div>
   </div>
   <div class="form-group pt-2">
     <label for="productImage">ProductImage</label>
@@ -72,11 +100,12 @@
     <label for="productDescription">productDescription</label>
     <input
     name="productDescription"
-    type="text" 
+    type="text-area" 
     class="form-control" 
     placeholder="productDescription"
     formControlName="productDescription"
-    style="border: 2px solid rgb(96, 145, 96);"/>
+    style="border: 2px solid rgb(96, 145, 96);"
+    />
   </div>
   <div class="form-group col-md-12" style="margin-top: 10px;">
       <label for="ClientName">ClientName</label>
@@ -84,7 +113,17 @@
       placeholder="ClientName" 
       name="ClientName"
       formControlName="ClientName"
-      style="border: 2px solid rgb(96, 145, 96);"/>
+      style="border: 2px solid rgb(96, 145, 96);"
+      [ngClass]="{'is-valid': productForm.get('ClientName')?.valid && (productForm.get('ClientName')?.dirty || productForm.get('ClientName')?.touched),
+          'is-invalid': productForm.get('ClientName')?.invalid &&(productForm.get('ClientName')?.dirty || productForm.get('ClientName')?.touched)
+        }"
+      />
+      <div class="valid-feedback">
+          accepted
+      </div>
+      <div class="invalid-feedback">
+          please enter a value
+      </div>
     </div>
     <div style="display: flex; justify-content: center;">
         <button  type="submit" class="btn btn-primary" style="margin-bottom: 20px; margin-top: 20px;">Submit</button>

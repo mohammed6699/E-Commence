@@ -4,15 +4,16 @@ import { FormControl, FormGroup, FormsModule, NgForm, ReactiveFormsModule, Valid
 import { ProductService } from '../../service/product-service';
 import { IProduct } from '../../Models/iproduct';
 import { RouterModule } from '@angular/router';
-
+import { MatSnackBarModule, MatSnackBar} from '@angular/material/snack-bar';
 @Component({
   selector: 'app-reactive-form-products',
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, MatSnackBarModule],
 templateUrl: './reactive-form-products.html',
   styleUrl: './reactive-form-products.css'
 })
 export class ReactiveFormProducts {
   private product = inject(ProductService)
+  snak = inject(MatSnackBar)
   productProps:IProduct = {} as IProduct
   productForm:FormGroup
   selectAction : 'add'| 'update'| 'delete' = 'add';
@@ -28,6 +29,14 @@ export class ReactiveFormProducts {
       ClientName: new FormControl('', [Validators.minLength(5)])
     })
   }
+  private showSuccess(msg: string): void {
+  this.snak.open(msg, 'Close', {
+    duration: 3000,                      
+    verticalPosition: 'top',            
+    horizontalPosition: 'center',       
+    panelClass: ['snack-success']       
+  });
+}
   get ProductValidation(){
     return this.productForm.get('ProductValidation')
   }
@@ -37,6 +46,7 @@ addProduct(){
   console.log('product data', newProduct)
   this.product.addProduct(newProduct).subscribe((data) => {
     console.log(data);
+    this.showSuccess('Product added Succefully')
     this.productProps = {} as IProduct;
     this.productForm.reset()
   })

@@ -4,15 +4,16 @@ import { IProduct } from '../../Models/iproduct';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-
+import { MatSnackBarModule, MatSnackBar} from '@angular/material/snack-bar';
 @Component({
   selector: 'app-updated-component',
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, MatSnackBarModule],
   templateUrl: './updated-component.html',
   styleUrl: './updated-component.css'
 })
 export class UpdatedComponent {
   private product = inject(ProductService)
+  snak = inject(MatSnackBar)
   productProps:IProduct = {} as IProduct
   productForm:FormGroup
   constructor(){
@@ -27,6 +28,15 @@ export class UpdatedComponent {
       ClientName: new FormControl('', [Validators.minLength(5)])
     })
   }
+  private showSuccess(msg: string): void {
+  this.snak.open(msg, 'Close', {
+    duration: 3000,                      
+    verticalPosition: 'top',            
+    horizontalPosition: 'center',       
+    panelClass: ['snack-success']       
+  });
+}
+
   get ProductValidation(){
     return this.productForm.get('ProductValidation')
   }
@@ -36,6 +46,7 @@ export class UpdatedComponent {
   if(productId){
     this.product.updateProduct(this.productForm.value).subscribe((data) => {
     console.log("updated data: ",data);
+    this.showSuccess('product Updated')
     this.productProps = {} as IProduct;
     this.productForm.reset()
   })

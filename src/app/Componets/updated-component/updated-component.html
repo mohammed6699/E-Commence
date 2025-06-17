@@ -11,7 +11,7 @@
       name="id"
       formControlName="id"
       style="border: 2px solid rgb(118, 109, 201);"
-      [ngClass]="{'is-valid':ProductValidation?.valid, 'is-invalid':(ProductValidation?.touched) && ProductValidation?.invalid}"/>
+      />
     </div>
   </div>
   <div class="form-row">
@@ -21,9 +21,18 @@
       placeholder="productName" 
       name="productName"
       formControlName="productName"
-      style="border: 2px solid rgb(118, 109, 201);"/>
+      style="border: 2px solid rgb(118, 109, 201);"
+      [ngClass]="{'is-valid': productForm.get('productName')?.valid && (productForm.get('productName')?.dirty || productForm.get('productName')?.touched),
+          'is-invalid': productForm.get('productName')?.invalid &&(productForm.get('productName')?.dirty || productForm.get('productName')?.touched)
+        }"
+      />
     </div>
-
+    <div class="valid-feedback">
+          accepted
+    </div>
+    <div class="invalid-feedback">
+          please enter a value
+    </div>
     <div class="form-group col-md-12">
       <label for="productQuantity" style="padding-bottom: 10px; padding-top: 10px;">productQuantity</label>
       <input 
@@ -32,7 +41,17 @@
       placeholder="productQuantity"
       name="productQuantity"
       formControlName="productQuantity"
-     style="border: 2px solid rgb(118, 109, 201);"/>
+     style="border: 2px solid rgb(118, 109, 201);"
+     [ngClass]="{'is-valid': productForm.get('productQuantity')?.valid && (productForm.get('productQuantity')?.dirty || productForm.get('productQuantity')?.touched),
+          'is-invalid': productForm.get('productQuantity')?.invalid &&(productForm.get('productQuantity')?.dirty || productForm.get('productQuantity')?.touched)
+        }"
+     />
+    <div class="valid-feedback">
+          accepted
+    </div>
+    <div class="invalid-feedback">
+          please enter a value
+    </div>
     </div>
   </div>
   <div class="form-group col-md-12" style="padding-top: 10px;">
@@ -54,7 +73,16 @@
     id="inputAddress" 
     placeholder="productPrice"
     formControlName="productPrice"
-    style="border: 2px solid rgb(118, 109, 201);"/>
+    style="border: 2px solid rgb(118, 109, 201);"
+     [ngClass]="{'is-valid': productForm.get('productQuantity')?.valid && (productForm.get('productQuantity')?.dirty || productForm.get('productQuantity')?.touched),
+          'is-invalid': productForm.get('productQuantity')?.invalid &&(productForm.get('productQuantity')?.dirty || productForm.get('productQuantity')?.touched)
+        }"/>
+  <div class="valid-feedback">
+      accepted
+    </div>
+    <div class="invalid-feedback">
+          please enter a value
+    </div>
   </div>
   <div style="display: flex; align-items: baseline; justify-content: space-between;">  
   <button type="submit" class="btn btn-primary" style="margin-bottom: 20px; margin-top: 20px;">Update Prouct</button>
