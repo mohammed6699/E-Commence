@@ -2,13 +2,13 @@
   "products": [
     {
       "id": "1",
-      "productName": "",
-      "productImage": "",
+      "productName": "Apple iPhone 15",
+      "productImage": "'https://f.nooncdn.com/p/pnsku/N53432547A/45/_/1694762192/fd45d583-8af9-4ff3-8032-af4a5a3c553c.jpg?format=avif&wproductIdth=240'",
       "productQuantity": 13,
       "productPrice": 500,
-      "CategoryID": "",
-      "productDescription": "",
-      "ClientName": "",
+      "CategoryID": "1",
+      "productDescription": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem  lorem lorem lorem lorem lorem lorem",
+      "ClientName": "Mohamed",
       "showImg": true,
       "showdate": false
     },
