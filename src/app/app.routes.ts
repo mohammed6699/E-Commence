@@ -11,6 +11,8 @@ import { ReactiveFormProducts } from './Componets/reactive-form-products/reactiv
 import { User } from './Componets/user/user';
 import { loginGuard } from './guards/login-guard';
 import { adminGuardGuard } from './guards/admin-guard-guard';
+import { UpdatedComponent } from './Componets/updated-component/updated-component';
+import { DeleteComponnent } from './Componets/delete-componnent/delete-componnent';
 // make the app routes
 export const routes: Routes = [
     // all my routes
@@ -26,7 +28,9 @@ export const routes: Routes = [
     {path:'aboutus', component:Aboutus, title:"About Us page"},
     {path:'signUp', component:SignUpTemplatedrivien, title:'Sign Up Page'},
     {path:'admin/signup', component:User, title:'add new user'},
-    {path:'insertproduct', component:ReactiveFormProducts, title:'Add Product Page',canActivate:[adminGuardGuard]}
+    {path:'insertproduct', component:ReactiveFormProducts, title:'Add Product Page',canActivate:[adminGuardGuard]},
+    {path:'updateproduct', component:UpdatedComponent, title:'Add Product Page',canActivate:[adminGuardGuard]},
+    {path:'deleteproduct', component:DeleteComponnent, title:'Add Product Page',canActivate:[adminGuardGuard]}
     ]},
     // {path:'Login', component:SignIn, title:'Login Page'},
     {path:'**', component:Notfound} // wild card routes
