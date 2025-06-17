@@ -13,18 +13,6 @@
       "showdate": false
     },
     {
-      "id": "2",
-      "productName": "Samsung Galaxy frontend ",
-      "productImage": "https://f.nooncdn.com/p/pnsku/N70030440V/45/_/1702699238/6ae73ece-d29e-4a81-ba41-850055d0937f.jpg?format=avif&width=240",
-      "productQuantity": 0,
-      "productPrice": 200,
-      "CategoryID": 2,
-      "productDescription": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem  lorem lorem lorem lorem lorem lorem",
-      "ClientName": "Ahmed",
-      "showImg": true,
-      "showdate": false
-    },
-    {
       "id": "3",
       "productName": "Apple iPhone 13",
       "productImage": "https://f.nooncdn.com/p/v1686205682/N50838986A_1.jpg?format=avif&width=240",
@@ -83,6 +71,16 @@
       "ClientName": "Ali",
       "showImg": true,
       "showdate": false
+    },
+    {
+      "id": "15",
+      "productName": "mohamed",
+      "productQuantity": 50,
+      "productPrice": 500,
+      "productImage": "C:\\fakepath\\hecto.jpg",
+      "CategoryID": 55,
+      "productDescription": "new phone",
+      "ClientName": "mohamed"
     }
   ],
   "users": [

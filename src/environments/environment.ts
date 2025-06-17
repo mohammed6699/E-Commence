@@ -1,5 +1,5 @@
 // for depolymnet process
 export const environment = {
-    baseUrl:'http://localhost:3000/',
-    production:false
+    baseUrl:'https://e-commence-five.vercel.app/',
+    production:true
 };
