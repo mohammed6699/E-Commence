@@ -1,0 +1,21 @@
+<form class="container" 
+ style="border: 1px solid black; width: 500px; border-radius: 10px; margin-top: 20px; margin-bottom: 20px; margin-top: 150px;"
+ (ngSubmit)="deleteProduct()"
+ [formGroup]="productForm">
+  <div class="form-row mt-1">
+    <div class="form-group col-md-6" style="margin-top: 10px;">
+      <label for="inputEmail4" class="mt-2">ProductId</label>
+      <input type="text" class="form-control" 
+      id="inputEmail4" 
+      placeholder="productId" 
+      name="productName"
+      formControlName="id"
+      style="border: 2px solid rgb(213, 87, 87);"
+      />
+    </div>
+  </div>
+  <div style="display: flex; align-items: baseline; justify-content: space-between;">
+      <button type="submit" class="btn btn-danger" style="margin-bottom: 20px; margin-top: 20px;">Delete Product</button>
+      <button type="submit" class="btn btn-info" routerLink="/insertproduct">Back To Admin Board</button>
+  </div>
+</form> 

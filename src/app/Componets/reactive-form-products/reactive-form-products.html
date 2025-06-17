@@ -1,84 +1,15 @@
  <div class="d-flex justify-content-between mt-3">
-  <button (click)="selectAction = 'add'" class="btn btn-group">Add Product</button>
-  <button (click)="selectAction = 'update'" class="btn btn-light">update Product</button>
-  <button (click)="selectAction = 'delete'" class="btn btn-danger">delete Product</button>
+  <button class="btn btn-success">Add Product</button>
+  <button routerLink="/updateproduct" class="btn btn-primary">update Product</button>
+  <button routerLink="/deleteproduct" class="btn btn-danger">delete Product</button>
  </div>
- @if(selectAction === 'update'){
- <form class="container" 
- style="border: 1px solid black; width: 500px; border-radius: 10px; margin-top: 20px; margin-bottom: 20px; display: flex; flex-direction: column; "
- (ngSubmit)="updateProduct()"
- [formGroup]="productForm">
- <div class="form-row">
-    <div class="form-group col-md-6" style="margin-top: 10px;">
-      <label for="ProductId" style="padding-bottom: 10px;">ProductId</label>
-      <input type="text" class="form-control" 
-      placeholder="ProductId" 
-      name="id"
-      formControlName="id"
-      style="border: 2px solid rgb(118, 109, 201);"
-      [ngClass]="{'is-valid':ProductValidation?.valid, 'is-invalid':(ProductValidation?.touched) && ProductValidation?.invalid}"/>
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6" style="margin-top: 10px;">
-      <label for="productName" style="padding-bottom: 10px; padding-top: 10px;">productName</label>
-      <input type="text" class="form-control" 
-      placeholder="productName" 
-      name="productName"
-      formControlName="productName"
-      style="border: 2px solid rgb(118, 109, 201);"/>
-    </div>
-    <div class="form-group col-md-6">
-      <label for="productQuantity" style="padding-bottom: 10px; padding-top: 10px;">productQuantity</label>
-      <input 
-      type="number" 
-      class="form-control" 
-      placeholder="productQuantity"
-      name="productQuantity"
-      formControlName="productQuantity"
-     style="border: 2px solid rgb(118, 109, 201);"/>
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="productPrice" style="padding-bottom: 10px; padding-top: 10px;">productPrice</label>
-    <input
-    name="productPrice"
-    type="number" 
-    class="form-control" 
-    id="inputAddress" 
-    placeholder="productPrice"
-    formControlName="productPrice"
-    style="border: 2px solid rgb(118, 109, 201);"/>
-  </div>
-  <button type="submit" class="btn btn-primary" style="margin-bottom: 20px; margin-top: 20px;">Update Prouct</button>
-</form>
-}@else if (selectAction === 'delete') {
-   <form class="container" 
- style="border: 1px solid black; width: 500px; border-radius: 10px; margin-top: 20px; margin-bottom: 20px;"
- (ngSubmit)="deleteProduct()"
- [formGroup]="productForm">
-  <div class="form-row">
-    <div class="form-group col-md-6" style="margin-top: 10px;">
-      <label for="inputEmail4">ProductId</label>
-      <input type="text" class="form-control" 
-      id="inputEmail4" 
-      placeholder="productName" 
-      name="productName"
-      formControlName="id"
-      style="border: 2px solid rgb(213, 87, 87);"
-      />
-    </div>
-  </div>
-  <button type="submit" class="btn btn-danger" style="margin-bottom: 20px; margin-top: 20px;">Delete Product</button>
-</form>
-}@else{
-   <form class="container" 
+<form class="container" 
  style="border: 1px solid black; width: 500px; border-radius: 10px; margin-top: 20px; margin-bottom: 20px;"
  (ngSubmit)="addProduct()"
  [formGroup]="productForm">
   <div class="form-row">
     <div class="form-row">
-    <div class="form-group col-md-6" style="margin-top: 10px;">
+    <div class="form-group col-md-12" style="margin-top: 10px;">
       <label for="ProductId">ProductId</label>
       <input type="text" class="form-control" 
       placeholder="ProductId" 
@@ -87,8 +18,7 @@
       style="border: 2px solid rgb(96, 145, 96);"/>
     </div>
   </div>
-    <div style="display: flex; align-items: baseline; gap: 10px">
-        <div class="form-group col-md-6" style="margin-top: 10px;">
+        <div class="form-group col-md-12" style="margin-top: 10px;">
         <label for="ProductName">ProductName</label>
         <input type="text" class="form-control" 
         placeholder="productName" 
@@ -96,7 +26,7 @@
         formControlName="productName"
         style="border: 2px solid rgb(96, 145, 96);"/>
       </div>
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-12 pt-2">
         <label for="productQuantity">productQuantity</label>
         <input 
         type="number" 
@@ -106,9 +36,9 @@
         formControlName="productQuantity"
       style="border: 2px solid rgb(96, 145, 96);"/>
       </div>
-    </div>
+
   </div>
-  <div class="form-group">
+  <div class="form-group pt-2">
     <label for="productPrice">productPrice</label>
     <input
     name="productPrice"
@@ -118,7 +48,7 @@
     formControlName="productPrice"
     style="border: 2px solid rgb(96, 145, 96);"/>
   </div>
-  <div class="form-group">
+  <div class="form-group pt-2">
     <label for="productImage">ProductImage</label>
     <input
     name="productPrice"
@@ -128,7 +58,7 @@
     formControlName="productImage"
     style="border: 2px solid rgb(96, 145, 96);"/>
   </div>
-  <div class="form-group">
+  <div class="form-group pt-2">
     <label for="CategoryID">CategoryID</label>
     <input
     name="CategoryID"
@@ -138,7 +68,7 @@
     formControlName="CategoryID"
     style="border: 2px solid rgb(96, 145, 96);"/>
   </div>
-  <div class="form-group">
+  <div class="form-group pt-2">
     <label for="productDescription">productDescription</label>
     <input
     name="productDescription"
@@ -148,7 +78,7 @@
     formControlName="productDescription"
     style="border: 2px solid rgb(96, 145, 96);"/>
   </div>
-  <div class="form-group col-md-6" style="margin-top: 10px;">
+  <div class="form-group col-md-12" style="margin-top: 10px;">
       <label for="ClientName">ClientName</label>
       <input type="text" class="form-control" 
       placeholder="ClientName" 
@@ -156,6 +86,7 @@
       formControlName="ClientName"
       style="border: 2px solid rgb(96, 145, 96);"/>
     </div>
-  <button type="submit" class="btn btn-primary" style="margin-bottom: 20px; margin-top: 20px;">Submit</button>
+    <div style="display: flex; justify-content: center;">
+        <button  type="submit" class="btn btn-primary" style="margin-bottom: 20px; margin-top: 20px;">Submit</button>
+    </div>
 </form>
-}

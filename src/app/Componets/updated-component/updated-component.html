@@ -1,0 +1,64 @@
+ <form class="container" 
+ style="border: 1px solid black; width: 500px; border-radius: 10px; margin-top: 20px; margin-bottom: 20px; display: flex; flex-direction: column; "
+ (ngSubmit)="updateProduct()"
+ [formGroup]="productForm">
+
+  <div class="form-row">
+    <div class="form-group col-md-12" style="margin-top: 10px;">
+      <label for="ProductId" style="padding-bottom: 10px;">ProductId</label>
+      <input type="text" class="form-control" 
+      placeholder="ProductId" 
+      name="id"
+      formControlName="id"
+      style="border: 2px solid rgb(118, 109, 201);"
+      [ngClass]="{'is-valid':ProductValidation?.valid, 'is-invalid':(ProductValidation?.touched) && ProductValidation?.invalid}"/>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-12" style="margin-top: 10px;">
+      <label for="productName" style="padding-bottom: 10px; padding-top: 10px;">productName</label>
+      <input type="text" class="form-control" 
+      placeholder="productName" 
+      name="productName"
+      formControlName="productName"
+      style="border: 2px solid rgb(118, 109, 201);"/>
+    </div>
+
+    <div class="form-group col-md-12">
+      <label for="productQuantity" style="padding-bottom: 10px; padding-top: 10px;">productQuantity</label>
+      <input 
+      type="number" 
+      class="form-control" 
+      placeholder="productQuantity"
+      name="productQuantity"
+      formControlName="productQuantity"
+     style="border: 2px solid rgb(118, 109, 201);"/>
+    </div>
+  </div>
+  <div class="form-group col-md-12" style="padding-top: 10px;">
+    <label for="productImage">ProductImage</label>
+    <input
+    name="productPrice"
+    type="file" 
+    class="form-control" 
+    placeholder="productImage"
+    formControlName="productImage"
+    style="border: 2px solid rgb(118, 109, 201)"/>
+  </div>
+  <div class="form-group col-md-12">
+    <label for="productPrice" style="padding-bottom: 10px; padding-top: 10px;">productPrice</label>
+    <input
+    name="productPrice"
+    type="number" 
+    class="form-control" 
+    id="inputAddress" 
+    placeholder="productPrice"
+    formControlName="productPrice"
+    style="border: 2px solid rgb(118, 109, 201);"/>
+  </div>
+  <div style="display: flex; align-items: baseline; justify-content: space-between;">  
+  <button type="submit" class="btn btn-primary" style="margin-bottom: 20px; margin-top: 20px;">Update Prouct</button>
+  <button type="submit" class="btn btn-danger" routerLink="/deleteproduct" style="margin-bottom: 20px; margin-top: 20px;">Delete Product</button>
+  <button type="submit" class="btn btn-secondary" routerLink="/insertproduct">Back To Admin Board</button>
+</div>
+</form>

@@ -3,16 +3,17 @@ import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ProductService } from '../../service/product-service';
 import { IProduct } from '../../Models/iproduct';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-reactive-form-products',
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule],
 templateUrl: './reactive-form-products.html',
   styleUrl: './reactive-form-products.css'
 })
 export class ReactiveFormProducts {
   private product = inject(ProductService)
-  productProps:IProduct  = {} as IProduct
+  productProps:IProduct = {} as IProduct
   productForm:FormGroup
   selectAction : 'add'| 'update'| 'delete' = 'add';
   constructor(){
@@ -37,34 +38,37 @@ addProduct(){
   this.product.addProduct(newProduct).subscribe((data) => {
     console.log(data);
     this.productProps = {} as IProduct;
+    this.productForm.reset()
   })
 }else{
   throw Error
 }
 }
-updateProduct(){
-  const productId = this.productForm.value.id;
-  console.log('producId', productId)
-  if(productId){
-    this.product.updateProduct(this.productForm.value).subscribe((data) => {
-    console.log("updated data: ",data);
-    this.productProps = {} as IProduct;
-  })
-  }else{
-    console.log("Error updating the data")
-  }
-}
-deleteProduct(){
-  const productId = this.productForm.value.id;
-  console.log('producId', productId)
-  if(productId){
-     this.product.deleteProduct(this.productForm.value).subscribe((data) => {
-    console.log("Deleted data: ",data);
-    this.productProps = {} as IProduct;
-  })
-  }else{
-    throw Error
-  }
+// updateProduct(){
+//   const productId = this.productForm.value.id;
+//   console.log('producId', productId)
+//   if(productId){
+//     this.product.updateProduct(this.productForm.value).subscribe((data) => {
+//     console.log("updated data: ",data);
+//     this.productProps = {} as IProduct;
+//     this.productForm.reset()
+//   })
+//   }else{
+//     console.log("Error updating the data")
+//   }
+// }
+// deleteProduct(){
+//   const productId = this.productForm.value.id;
+//   console.log('producId', productId)
+//   if(productId){
+//      this.product.deleteProduct(this.productForm.value).subscribe((data) => {
+//     console.log("Deleted data: ",data);
+//     this.productProps = {} as IProduct;
+//     this.productForm.reset()
+//   })
+//   }else{
+//     throw Error
+//   }
  
-}
+// }
 }
