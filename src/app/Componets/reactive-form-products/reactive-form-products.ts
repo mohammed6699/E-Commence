@@ -53,7 +53,6 @@ updateProduct(){
   }else{
     console.log("Error updating the data")
   }
-  
 }
 deleteProduct(){
   const productId = this.productForm.value.id;
